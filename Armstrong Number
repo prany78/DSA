@@ -1,0 +1,23 @@
+
+class Solution {
+    static boolean armstrongNumber(int n) {
+        int k=n;
+        int a=0;
+        int sum=0;
+        if(n<100 && n>999)
+             return false;
+         else 
+         {
+             while(n>0)
+              {
+                  a=n%10;
+                  sum=sum+(a*a*a);
+                  n=n/10;
+              }
+              if(sum==k)
+               return true;
+              else return false;
+         }
+    }
+    
+}
