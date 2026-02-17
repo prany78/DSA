@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isSorted(int[] arr) {
+        int i=0;
+        int n=arr.length;
+        int a=0;
+        while(i<n-1)
+        {
+            if(arr[i]>arr[i+1]){
+                a++;
+                }
+            i++;
+        }
+        if(a==0) return true;
+        else return false;
+    }
+}
