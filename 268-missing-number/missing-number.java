@@ -8,6 +8,5 @@ class Solution {
        }
        int sum2=(a*(a+1))/2;
        return sum2-sum;
-
     }
 }
