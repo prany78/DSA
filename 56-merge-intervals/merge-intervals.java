@@ -5,12 +5,12 @@ class Solution {
         List<int[]> res = new ArrayList<>();
 
         for(int[] interval : intervals) {
-            // if no overlap
+            
             if(res.isEmpty() || interval[0] > res.get(res.size() - 1)[1]) {
                 res.add(interval);
             } 
             else {
-                // merge
+                
                 res.get(res.size() - 1)[1] = 
                     Math.max(res.get(res.size() - 1)[1], interval[1]);
             }
