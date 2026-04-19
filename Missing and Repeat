@@ -1,0 +1,32 @@
+class Solution {
+    ArrayList<Integer> findTwoElement(int arr[]) {
+        Arrays.sort(arr);
+        ArrayList<Integer> ans = new ArrayList<>();
+        
+        int repeating = -1, missing = -1;
+
+        if(arr[0] != 1) {
+                 missing = 1;
+              }
+        for(int i = 0; i < arr.length - 1; i++) {
+            if(arr[i] == arr[i + 1]) {
+                repeating = arr[i];
+            }
+            if(arr[i + 1] - arr[i] > 1) {
+                missing = arr[i] + 1;
+            }
+        }
+
+        
+        if(arr[arr.length - 1] != arr.length) {
+            missing = arr.length;
+        }
+
+        ans.add(repeating);
+        ans.add(missing);
+
+        return ans;
+        
+        
+    }
+}
